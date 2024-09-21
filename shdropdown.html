@@ -1,0 +1,89 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Buttons Example</title>
+
+<script>
+function abc()
+{
+  var ele = document.getElementById("operation");
+   var opt;
+   
+          opt=ele.value;
+          //alert(opt);
+
+                var a=document.getElementById("N1").value;
+                var b=document.getElementById("N2").value;
+                if(opt=='+')
+                   var c=parseInt(a)+parseInt(b);
+                 else if(opt=='-')
+                   var c=parseInt(a)-parseInt(b);
+                else if(opt=='/')
+                   var c=parseInt(a)/parseInt(b);
+                else if(opt=='*')
+                   var c=parseInt(a)*parseInt(b);
+                
+                document.getElementById("N3").value=c;
+}
+
+function cal(opt)
+{
+var a=document.getElementById("N1").value;
+var b=document.getElementById("N2").value;
+if(opt=='+')
+var c=parseInt(a)+parseInt(b);
+else if(opt=='-')
+var c=parseInt(a)-parseInt(b);
+else if(opt=='/')
+var c=parseInt(a)/parseInt(b);
+else if(opt=='*')
+var c=parseInt(a)*parseInt(b);
+
+
+document.getElementById("N3").value=c;
+
+alert(c);
+}
+
+function Natural()
+{
+var n = parseInt( document.getElementById("N4").value);
+
+// alert( n);
+
+var p="";
+for ( var i=0; i<=n ; i++)
+  p = p+ i + "</br>";
+
+//alert(p);
+document.getElementById("p1").innerHTML=p;
+
+}
+
+</script>
+</head>
+<body>
+Enter No : <input type="text" id="N1"> </input>
+<br>
+Enter No : <input type="text" id="N2"></input>
+<br>
+<br>
+ <h2>Select your operation:</h2>
+
+    <select id="operation" name="operation" >
+        <option value="+">SUM        
+        <option value="-">DIFF        
+        <option value="/">DIVI        
+        <option value="*">MULTI
+    </select>
+
+<br>
+<br>
+<button onclick="abc()">calculation</button>
+<br>
+<br>
+Result : <input type="text" id="N3"></input>
+
+ 
+
+</body>
